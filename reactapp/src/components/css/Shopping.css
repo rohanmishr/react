@@ -1,0 +1,9 @@
+#item{
+    border: solid 3px black;
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+}
+
+.thumb{
+    width: 400px;
+}

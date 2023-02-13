@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./css/TodoList.css";
 
-function AddListItem(){
-    const val = document.getElementById("input").value;
-    document.getElementById("list").innerHTML += "<li>" + val + "</li>"
-}
 function TodoList(){
+    const [text, setText] = useState("");
+    const [items, setItems] = useState([]);
+
     return (
         <>
             <h1>Todo List</h1>
             <ul id="list">
-                <input id="input" type="text" placeholder="Enter list item..."></input><button onClick={() => AddListItem()}>Submit!</button>
+                {items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
             </ul>
+            <input id="input" type="text" placeholder="Enter list item..." text={text} onChange={(e) => setText(e.target.value)}></input>
+            <button onClick={() => {
+                setItems([...items, text]);
+                setText("");
+            }}>Submit!</button>
         </>
     )
 }

@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './components/App';
-import Page from './components/Page';
+import App from './components/App.js';
+import TodoList from './components/TodoList.js';
+import Calc from './components/Calc.js';
+import Shopping from './components/shopping/Shopping.js';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Page />
-    <App />
+    <Shopping />
   </React.StrictMode>
 );
 

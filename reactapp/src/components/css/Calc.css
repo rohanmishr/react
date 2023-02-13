@@ -1,0 +1,15 @@
+#calc{
+    text-align: center;
+}
+.calc-button{
+    width: 50px;
+    height: 50px;
+    border: black solid 3px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.calc-button:hover{
+    transition: 0.5s;
+    border: rgb(57, 57, 57) 3px;
+}
